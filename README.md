@@ -1,8 +1,8 @@
-Employee Directory API
+# Employee Directory API
 
 A CRUD backend API for managing employee records using Python, FastAPI, SQLAlchemy, and SQLite.
 
-Technologies
+## Technologies
 
 * Python
 * FastAPI
@@ -11,8 +11,9 @@ Technologies
 * Pydantic
 * Uvicorn
 
-Project Structure
+## Project Structure
 
+```text
 employee-directory-api/
 ├── app/
 │   ├── __init__.py
@@ -27,20 +28,20 @@ employee-directory-api/
 ├── requirements.txt
 └── README.md
 
-Setup
+### Setup
 
 Create and use the virtual environment, then install dependencies:
 
 venv\Scripts\python.exe -m pip install -r requirements.txt
 
-Run the Application
+### Run the Application
 
 venv\Scripts\python.exe -m uvicorn app.main:app --reload
 
 After starting the server, open /docs to access the Swagger 
 API documentation.
 
-API Endpoints
+### API Endpoints
 
 Method	Endpoint	Description
 POST	/employees	Add employee
@@ -49,7 +50,7 @@ GET	/employees/{employee_id}	Get employee by ID
 PUT	/employees/{employee_id}	Update employee
 DELETE	/employees/{employee_id}	Delete employee
 
-Employee Fields
+## Employee Fields
 
 * id
 * name
@@ -59,7 +60,7 @@ Employee Fields
 * designation
 * created_at
 
-Validations
+## Validations
 
 * Employee email must be unique.
 * Required fields are validated.
@@ -67,7 +68,7 @@ Validations
 * A non-existing employee returns 404.
 * Duplicate email during creation or update returns 409.
 
-Database
+### Database
 
 The application uses SQLite with the database file:
 
@@ -77,7 +78,7 @@ The main table is:
 
 employees
 
-Testing
+### Testing
 
 The API was tested using FastAPI Swagger UI, including:
 
